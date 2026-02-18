@@ -5,12 +5,12 @@ p2 = Character("Orc", 80, 15)
 
 while p1.is_alive() and p2.is_alive():
 
-    print("\n1- Knight saldır")
-    print("2- Orc saldır")
-    print("3- Durumu göster")
-    print("4- Çık")
+    print("\n1- Knight attack")
+    print("2- Orc attack")
+    print("3- Show status")
+    print("4- exit")
 
-    secim = input("Seçim: ")
+    secim = input("Choice: ")
 
     if secim == "1":
         p1.attack(p2)
@@ -26,10 +26,11 @@ while p1.is_alive() and p2.is_alive():
         break
 
     else:
-        print("Geçersiz seçim")
+        print("İnvalid choice")
 
 if not p1.is_alive():
-    print("Knight öldü! Orc kazandı!")
+    print("Knight is dead, Orc has won!")
 
 if not p2.is_alive():
-    print("Orc öldü! Knight kazandı!")
+    print("Orc is dead, Knight has won!")
+
