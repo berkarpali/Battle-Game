@@ -23,13 +23,14 @@ class Character:
 
             if damage > 0 and random.random() < 0.2:
                 damage *= 2
-                print("KRİTİK VURUŞ!!!")
+                print("CRITICAL HIT!!!")
 
-            print(self.name, damage, "hasar verdi!")
+            print(self.name, "dealt", damage, "damage")
             other.take_damage(damage)
 
         else:
-            print(self.name, "öldü, saldıramaz")
+            print(self.name, "is dead and can not attack")
 
     def show_status(self):
-        print(self.name, "Can:", self.health)
+        print(self.name, "Health:", self.health)
+
